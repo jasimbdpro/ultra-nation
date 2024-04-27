@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import Country from './components/Country/Country';
 
 function App() {
   const [countries, setCountries] = useState([]);
@@ -17,10 +18,10 @@ function App() {
 
       <h1> country loaded: {countries.length} </h1>
       <div>
-        <ul>{
-          countries.map(country => <li> {country.name.common}</li>)
+        {
+          countries.map(country => <Country key={country.cca3} country={country}> </Country>)
         }
-        </ul>
+
       </div>
 
       <header className="App-header">
