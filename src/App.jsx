@@ -10,7 +10,7 @@ function App() {
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
-    const url = "https://restcountries.com/v3.1/all";
+    const url = "https://raw.githubusercontent.com/jasimbdpro/ultra-nation/main/src/assets/restcountries.json";
     fetch(url)
       .then(res => res.json())
       .then(data => setCountries(data))
