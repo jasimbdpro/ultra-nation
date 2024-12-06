@@ -9,9 +9,9 @@ function App() {
   const [countries, setCountries] = useState([]);
   const [cart, setCart] = useState([]);
 
-
   useEffect(() => {
-    fetch("https://restcountries.com/v3.1/all")
+    const url = "https://restcountries.com/v3.1/all";
+    fetch(url)
       .then(res => res.json())
       .then(data => setCountries(data))
   }, [])
